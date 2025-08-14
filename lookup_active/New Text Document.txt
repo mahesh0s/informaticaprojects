@@ -1,0 +1,42 @@
+create table customers(
+customer_id number(20),
+name varchar2(255),
+email varchar2(255),
+credit_limit number(20),
+location_id number(20));
+  
+insert into customers values (60,'manoj','manoj@gmail.com',80000,801);
+insert into customers values (20,'rahul','rahul@gmail.com',20000,200);
+insert into customers values (30,'joe','joe@gmail.com',40000,300);
+insert into customers values (40,'sam','sam@gmail.com',50000,401);
+insert into customers values (50,'ramesh','ramesh@gmail.com',60000,700);
+
+select *from customers
+
+create table locations(
+location_id number(20),
+postal_code number(20),
+city varchar2(255));
+
+insert into locations values (101,567008,'banglore');
+insert into locations values (101,564000,'chennai');
+insert into locations values (101,565660,'banglore');
+insert into locations values (200,567009,'kolkata');
+insert into locations values (801,567000,'pune');
+insert into locations values (300,557008,'delhi');
+insert into locations values (401,566008,'hyderabad');
+insert into locations values (700,567010,'banglore');
+insert into locations values (700,567010,'banglore');
+select * from locations
+
+output-active_lookup
+--------------
+10	ram	ram@gmail.com	10000	101	565660	banglore
+10	ram	ram@gmail.com	10000	101	564000	chennai
+10	ram	ram@gmail.com	10000	101	567008	banglore
+60	manoj	manoj@gmail.com	80000	801	567000	pune
+20	rahul	rahul@gmail.com	20000	200	567009	kolkata
+30	joe	joe@gmail.com	40000	300	557008	delhi
+40	sam	sam@gmail.com	50000	401	566008	hyderabad
+50	ramesh	ramesh@gmail.com	60000	700	567010	banglore
+50	ramesh	ramesh@gmail.com	60000	700	567010	banglore

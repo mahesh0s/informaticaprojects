@@ -1,0 +1,43 @@
+create table sales(
+sale_id number(20),
+region varchar2(20),
+product varchar2(20),
+sales_amount number(20),
+quantity number(20),
+sale_date varchar2(20));
+
+
+
+insert into sales values (101,'north','pen',100,5,'01-04-2025');
+insert into sales values (102,'south','pen',150,7,'01-04-2025');
+insert into sales values (103,'north','pencil',80,10,'02-04-2025');
+insert into sales values (104,'east','pen',120,6,'03-04-2025');
+insert into sales values (105,'south','pencil',200,20,'04-04-2025');
+insert into sales values (106,'north','pen',130,4,'05-04-2025');
+insert into sales values (107,'east','pencil',90,9,'06-04-2025');
+
+TARGET TABLE
+-------------------
+create table SALES_T(
+sales_id number(20),
+region varchar2(20),
+total_sales number(20),
+total_quantity number(20),
+average_sales decimal(10,2),
+max_sales number(20),
+min_sales number(20),
+sale_count number(20)
+);
+-------------------------
+
+LOGICS
+-------------------------
+TOTAL_SALES =SUM(SALES_AMOUNT)
+TOTAL_QUANTITY =SUM(QUANTITY)
+AVERAGE_SALES =AVG(SALES_AMOUNT)
+MAX_SALE= MAX(SALES_AMOUNT)
+MIN_SALES = MIN(SALES_AMOUNT)
+SALES_COUNT =COUNT(SALES_ID)
+--------------------------------
+
+GROUP BY: REGION 

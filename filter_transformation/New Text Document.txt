@@ -1,0 +1,25 @@
+SOURCE TABLE
+-----------------
+create table employees(
+empid number(20),
+name varchar2(200),
+department varchar2(200),
+salary number(20));
+
+insert into employees values (101,'alice','HR',50000);
+insert into employees values (102,'bob','IT',80000);
+insert into employees values (103,'charlie','finance',60000);
+insert into employees values (104,'david','IT',75000);
+insert into employees values (105,'eve','HR',52000);
+
+TARGET TABLE:
+------------------
+
+create table employees_T(
+empid number(20),
+name varchar2(200),
+department varchar2(200),
+salary number(20));
+
+
+FILTER CONDTION : DEPARTMENT = 'HR', AND SALARY>51000

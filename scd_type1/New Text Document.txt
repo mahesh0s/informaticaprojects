@@ -1,0 +1,53 @@
+CREATE TABLE EMPLOYEE
+(
+
+EMPLOYEE_ID            NUMBER(20),    
+FULLNAME               NVARCHAR2(255) ,
+EMAIL                  NVARCHAR2(255) ,
+PHONE                  NVARCHAR2(50)  ,
+MANAGER_ID             NUMBER(12)     ,
+LOCATION               NVARCHAR2(255) ,
+SALARY                 NUMBER(8,2)    ,
+VERSION                NUMBER(20)  
+);
+
+1st RUN
+----------------
+insert into employee values(1,'rajesh',	'rajesh@rmail.com',46372782,1,'banglore',10000,1);
+insert into employee values(2,'jack','jack@email.com',54652763,1,'london',100000,1);
+insert into employee values(3,' rose','rose@email.com',326733672,1,'america',100000,1);
+insert into employee values(4,'mike','mike@emil.com',6378278,1,'swizerland',100000,1);
+
+2nd RUN
+------------
+insert into employee values(1,'rajesh',	'rajesh@rmail.com',46372782,1,'DELHI',50000,2);
+insert into employee values(2,'jack','jack@email.com',54652763,1,'UK',200000,2);
+
+
+CREATE TABLE tgt_EMPLOYEE
+(
+
+EMPLOYEE_ID            NUMBER(20),    
+FULLNAME               NVARCHAR2(255) ,
+EMAIL                  NVARCHAR2(255) ,
+PHONE                  NVARCHAR2(50)  ,
+MANAGER_ID             NUMBER(12)     ,
+LOCATION               NVARCHAR2(255) ,
+SALARY                 NUMBER(8,2)    ,
+VERSION                NUMBER(20)  
+);
+1ST RUN-output
+---------------
+EMPLOYEE_ID   FULLNAME EMAIL             PHONE      MANAGER_ID LOCATION_ID SALARY VERSION
+1             rajesh	rajesh@rmail.com 46372782     1          banglore   10000 1
+2             jack      jack@email.com   54652763      1         london     100000 1
+3	      rose	rose@email.com	 326733672	1	america	    100000	1
+4	      mike	mike@emil.com	 6378278	1	swizerland	100000	1
+2ND RUN-output
+------------
+EMPLOYEE_ID   FULLNAME EMAIL             PHONE      MANAGER_ID LOCATION_ID SALARY VERSION
+
+1	rajesh	rajesh@rmail.com	46372782	1	DELHI	50000	2
+2	jack	jack@email.com	54652763	1	UK	200000	2
+3	rose	rose@email.com	326733672	1	america	100000	1
+4	mike	mike@emil.com	6378278	1	swizerland	100000	1

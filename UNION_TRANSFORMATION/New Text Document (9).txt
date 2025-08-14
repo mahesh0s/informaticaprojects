@@ -1,0 +1,54 @@
+create table emp_east(
+emp_id number(20),
+name varchar2(20),
+department varchar2(20));
+
+insert into emp_east VALUES(1,'ravi','IT');
+insert into emp_east VALUES(2,'SITA','HR');
+insert into emp_east VALUES(3,'ABHI','IT');
+insert into emp_east VALUES(4,'DAVID','HR');
+SELECT * FROM EMP_EAST
+COMMIT
+--------------------------------------------------------------
+create table EMP_SOUTH(
+emp_id number(20),
+name varchar2(20),
+department varchar2(20)
+);
+
+insert into EMP_SOUTH VALUES(9,'JACK','IT');
+insert into EMP_SOUTH VALUES(10,'ROSE','IT');
+insert into EMP_SOUTH VALUES(11,'SHAM','HR');
+insert into EMP_SOUTH VALUES(12,'JASIMINE','HR');
+--------------------------------------------------------------------------------
+create table emp_north(
+emp_id number(20),
+name varchar2(20),
+department varchar2(20));
+
+insert into emp_NORTH VALUES(13,'JOHN','FINANCE');
+insert into emp_NORTH VALUES(14,'ALIKYA','IT');
+insert into emp_NORTH VALUES(15,'ESHA','HR');
+insert into emp_NORTH VALUES(16,'JASIMINE','HR');
+-----------------------------------------------------------------
+create table emp_west(
+emp_id number(20),
+name varchar2(20),
+department varchar2(20));
+
+insert into emp_west VALUES(13,'JOHN','FINANCE');
+insert into emp_west VALUES(14,'ALIKYA','IT');
+insert into emp_west VALUES(15,'ESHA','HR');
+insert into emp_west VALUES(16,'JASIMINE','HR');
+-----------------------------------------------------------------
+
+TARGET TABLE
+----------------
+create table emp_location(
+emp_id number(20),
+name varchar2(20),
+department varchar2(20)
+);
+
+
+

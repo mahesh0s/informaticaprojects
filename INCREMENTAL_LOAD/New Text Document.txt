@@ -1,0 +1,36 @@
+
+create table customer(
+CUST_ID	 number(20),
+CUST_NAME varchar2(255),
+CITY	varchar2(255),
+STATE	varchar2(255),
+WEBSITE	varchar2(255),
+CREDIT_LIMIT number(20),
+DATE_ENTERED date );
+commit
+select * from customer
+1ST RUN
+--------------
+insert into customer values(1,'rajesh','hyderabad','andhrapradesh','http://www.rajeshphillips.com',55000,'03/02/2016 ')
+insert into customer values(2,'tarun','banglore','karnataka','http://www.tarun.com',20000,'03/02/2016 ')
+insert into customer values(3,'nandi','hyderabad','andhrapradesh','http://www.nandi.com',30000,'02/02/2016 ')
+insert into customer values(4,'raja','banglore','karnataka','http://raja.com',50000,'10/02/2016 ')
+insert into customer values(5,'aslam','hyderabad','andhrapradesh','http://aslam.com',100000,'01/02/2017 ')
+insert into customer values(6,'junaid','banglore','karnataka','http://www.junaid.com',100000,'02/02/2016 ')
+-------------------------------------------------------------------------------------------------------------------
+2ND RUN
+-------------
+insert into customer values (7,'jack','silicon','america','http://www.jack.com',20000,'02-03-2017');
+insert into customer values (8,'rose','washington','america','http://www.rose.com',30000,'02-03-2017');
+
+create table stg_customer(
+
+CUST_ID            NUMBER(20),    
+CUST_NAME          VARCHAR2(255), 
+CITY               VARCHAR2(255), 
+STATE              VARCHAR2(255), 
+WEBSITE            VARCHAR2(255), 
+CREDIT_LIMIT       NUMBER(20),    
+DATE_ENTERED       DATE  );        
+
+select * from stg_customer

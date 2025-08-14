@@ -1,0 +1,36 @@
+source
+-------------
+
+create table emp_src(
+emp_id number(20),
+emp_name varchar2(20),
+dept_id number(20),
+location varchar2(20));
+
+insert into emp_src values(101,'alice',10,'newyork')
+insert into emp_src values(102,'bob',20,'')
+insert into emp_src values(103,'carlio',30,'chicago')
+insert into emp_src values(104,'david','','biston')
+insert into emp_src values(105,'eve',40,'newyork')
+insert into emp_src values(106,'frank',50,'houston')
+--------------------------------------------------------------------
+flatfile
+----------
+dept_id	deptname	location
+10	hr	newyork
+20	finance	null
+30	it	chicago
+50	operations	houston
+60	marketing	sandiego
+
+Target table
+-------------------------
+create table emp_src_t(
+emp_id number(20),
+emp_name varchar2(20),
+dept_id number(20),
+emp_location varchar2(20),
+deptname varchar2(20),
+location varchar2(20))
+
+Join Type:full outer join

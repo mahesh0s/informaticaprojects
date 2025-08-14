@@ -1,0 +1,39 @@
+CREATE TABLE SRC_CUSTOMER(
+CUST_ID VARCHAR2(255),
+FIRST_NAME VARCHAR2(255),
+LAST_NAME VARCHAR2(255),
+GENDER VARCHAR2(255),
+AGE NUMBER(20),
+EMAIL VARCHAR2(255),
+CITY VARCHAR2(255),
+DATE_ENTERED DATE );
+------------------------------------------------------------------------------------------------------------
+1st_run
+---------
+INSERT INTO SRC_CUSTOMER VALUES('C-987','SRINIVAS','REDDY','M',28,'SRINIVAS@EMAIL.COM','TIRUPATHI','01-05-2024')
+INSERT INTO SRC_CUSTOMER VALUES('C-988','POOJA','SHARMA','F',22,'POOJA@EMAIL.COM','MUMBAI','10-05-2024')
+INSERT INTO SRC_CUSTOMER VALUES('C-989','RAVI','KUMAR','M',40,'RAVI@EMAIL.COM','DELHI','10-05-2024')
+---------------------------------------------------------------------------------------------------------------
+2nd run
+---------------
+INSERT INTO SRC_CUSTOMER VALUES('C-987','SRINIVAS','REDDY','M',29,'SRINIVAS@EMAIL.COM','TIRUPATHI','15-05-2025')
+INSERT INTO SRC_CUSTOMER VALUES('C-988','POOJA','SHARMA','F',22,'POOJA@EMAIL.COM','bangolore','30-05-2025')
+
+
+-------------------------------------------------------------------------------------------------------------
+SELECT * FROM SRC_CUSTOMER
+------------------------------------
+target table
+-----------------
+CREATE TABLE dim_CUSTOMERs(
+customer_key number(20),
+CUST_ID VARCHAR2(255),
+FIRST_NAME VARCHAR2(255),
+LAST_NAME VARCHAR2(255),
+GENDER VARCHAR2(255),
+AGE NUMBER(20),
+EMAIL VARCHAR2(255),
+CITY VARCHAR2(255),
+DATE_ENTERED DATE,
+end_date date
+);

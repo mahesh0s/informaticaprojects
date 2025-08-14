@@ -1,0 +1,34 @@
+create table students(
+id number(20),
+name varchar2(20),
+score number(20));
+
+
+
+insert into students values (1,'alice',95);
+insert into students values (2,'bob',85);
+insert into students values (3,'charlie',95);
+insert into students values (4,'david',75);
+insert into students values (5,'eve',85);
+insert into students values (6,'frank',65);
+
+
+
+TARGET TABLE
+------------------------
+create table students_t(
+id number(20),
+name varchar2(20),
+score number(20),
+rank decimal(10,2));
+
+--------------------------------------
+OUTPUT:
+---------------
+ID NAME  SCORE RANK
+1 alice	  95	1
+3 charlie 95	1
+2 bob	  85	3
+5 eve	  85	3
+4 david	  75	5
+6 frank	  65	6
